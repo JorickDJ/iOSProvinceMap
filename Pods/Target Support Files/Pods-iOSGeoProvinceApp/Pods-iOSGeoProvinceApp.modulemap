@@ -1,0 +1,6 @@
+framework module Pods_iOSGeoProvinceApp {
+  umbrella header "Pods-iOSGeoProvinceApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53F031E01BB9B4F700DD73E1 /* Province.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F031DF1BB9B4F700DD73E1 /* Province.swift */; settings = {ASSET_TAGS = (); }; };
+		53F031E21BB9C13C00DD73E1 /* ProvinceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F031E11BB9C13C00DD73E1 /* ProvinceController.swift */; settings = {ASSET_TAGS = (); }; };
 		75032F9325C16189F5D88F6F /* Pods_iOSGeoProvinceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE60294895A2BC6DFDBB6ED /* Pods_iOSGeoProvinceApp.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BC05C27A1BB94FA30019AF1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC05C2791BB94FA30019AF1B /* AppDelegate.swift */; };
 		BC05C27C1BB94FA30019AF1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC05C27B1BB94FA30019AF1B /* ViewController.swift */; };
@@ -14,11 +16,12 @@
 		BC05C2811BB94FA30019AF1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC05C2801BB94FA30019AF1B /* Assets.xcassets */; };
 		BC05C2841BB94FA30019AF1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC05C2821BB94FA30019AF1B /* LaunchScreen.storyboard */; };
 		BC05C28C1BB94FBD0019AF1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC05C28B1BB94FBD0019AF1B /* MapKit.framework */; };
-		BCF4E9BB1BB955210087B9B1 /* JsonRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4E9BA1BB955210087B9B1 /* JsonRetriever.swift */; settings = {ASSET_TAGS = (); }; };
-		BCF4E9BD1BB955410087B9B1 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4E9BC1BB955410087B9B1 /* JsonParser.swift */; settings = {ASSET_TAGS = (); }; };
+		BCF4E9BB1BB955210087B9B1 /* JsonFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4E9BA1BB955210087B9B1 /* JsonFetcher.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53F031DF1BB9B4F700DD73E1 /* Province.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Province.swift; sourceTree = "<group>"; };
+		53F031E11BB9C13C00DD73E1 /* ProvinceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceController.swift; sourceTree = "<group>"; };
 		5FE3749735BEA761A27591A4 /* Pods-iOSGeoProvinceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSGeoProvinceApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSGeoProvinceApp/Pods-iOSGeoProvinceApp.release.xcconfig"; sourceTree = "<group>"; };
 		BC05C2761BB94FA30019AF1B /* iOSGeoProvinceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSGeoProvinceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC05C2791BB94FA30019AF1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -28,8 +31,7 @@
 		BC05C2831BB94FA30019AF1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC05C2851BB94FA30019AF1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC05C28B1BB94FBD0019AF1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		BCF4E9BA1BB955210087B9B1 /* JsonRetriever.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonRetriever.swift; sourceTree = "<group>"; };
-		BCF4E9BC1BB955410087B9B1 /* JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
+		BCF4E9BA1BB955210087B9B1 /* JsonFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFetcher.swift; sourceTree = "<group>"; };
 		D242DFFCDE0721E9C1F34C9D /* Pods-iOSGeoProvinceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSGeoProvinceApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSGeoProvinceApp/Pods-iOSGeoProvinceApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FBE60294895A2BC6DFDBB6ED /* Pods_iOSGeoProvinceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSGeoProvinceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -89,11 +91,12 @@
 				BC05C2791BB94FA30019AF1B /* AppDelegate.swift */,
 				BC05C27B1BB94FA30019AF1B /* ViewController.swift */,
 				BC05C27D1BB94FA30019AF1B /* Main.storyboard */,
-				BCF4E9BA1BB955210087B9B1 /* JsonRetriever.swift */,
-				BCF4E9BC1BB955410087B9B1 /* JsonParser.swift */,
+				BCF4E9BA1BB955210087B9B1 /* JsonFetcher.swift */,
 				BC05C2801BB94FA30019AF1B /* Assets.xcassets */,
 				BC05C2821BB94FA30019AF1B /* LaunchScreen.storyboard */,
 				BC05C2851BB94FA30019AF1B /* Info.plist */,
+				53F031DF1BB9B4F700DD73E1 /* Province.swift */,
+				53F031E11BB9C13C00DD73E1 /* ProvinceController.swift */,
 			);
 			path = iOSGeoProvinceApp;
 			sourceTree = "<group>";
@@ -219,10 +222,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCF4E9BB1BB955210087B9B1 /* JsonRetriever.swift in Sources */,
+				BCF4E9BB1BB955210087B9B1 /* JsonFetcher.swift in Sources */,
 				BC05C27C1BB94FA30019AF1B /* ViewController.swift in Sources */,
-				BCF4E9BD1BB955410087B9B1 /* JsonParser.swift in Sources */,
 				BC05C27A1BB94FA30019AF1B /* AppDelegate.swift in Sources */,
+				53F031E21BB9C13C00DD73E1 /* ProvinceController.swift in Sources */,
+				53F031E01BB9B4F700DD73E1 /* Province.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

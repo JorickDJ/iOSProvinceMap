@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53886E7B1BBA7554000D5B7B /* ProvinceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53886E7A1BBA7554000D5B7B /* ProvinceSection.swift */; settings = {ASSET_TAGS = (); }; };
+		53886E7D1BBA7841000D5B7B /* ProvinceSubSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53886E7C1BBA7841000D5B7B /* ProvinceSubSection.swift */; settings = {ASSET_TAGS = (); }; };
 		53F031E01BB9B4F700DD73E1 /* Province.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F031DF1BB9B4F700DD73E1 /* Province.swift */; settings = {ASSET_TAGS = (); }; };
 		53F031E21BB9C13C00DD73E1 /* ProvinceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F031E11BB9C13C00DD73E1 /* ProvinceController.swift */; settings = {ASSET_TAGS = (); }; };
 		75032F9325C16189F5D88F6F /* Pods_iOSGeoProvinceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE60294895A2BC6DFDBB6ED /* Pods_iOSGeoProvinceApp.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53886E7A1BBA7554000D5B7B /* ProvinceSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceSection.swift; sourceTree = "<group>"; };
+		53886E7C1BBA7841000D5B7B /* ProvinceSubSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceSubSection.swift; sourceTree = "<group>"; };
 		53F031DF1BB9B4F700DD73E1 /* Province.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Province.swift; sourceTree = "<group>"; };
 		53F031E11BB9C13C00DD73E1 /* ProvinceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceController.swift; sourceTree = "<group>"; };
 		5FE3749735BEA761A27591A4 /* Pods-iOSGeoProvinceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSGeoProvinceApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSGeoProvinceApp/Pods-iOSGeoProvinceApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -55,6 +59,24 @@
 				FBE60294895A2BC6DFDBB6ED /* Pods_iOSGeoProvinceApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53886E7E1BBA7D88000D5B7B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				53F031E11BB9C13C00DD73E1 /* ProvinceController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		53886E7F1BBA7D93000D5B7B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				53F031DF1BB9B4F700DD73E1 /* Province.swift */,
+				53886E7A1BBA7554000D5B7B /* ProvinceSection.swift */,
+				53886E7C1BBA7841000D5B7B /* ProvinceSubSection.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		98174EB19A519ECB19054A25 /* Pods */ = {
@@ -95,8 +117,8 @@
 				BC05C2801BB94FA30019AF1B /* Assets.xcassets */,
 				BC05C2821BB94FA30019AF1B /* LaunchScreen.storyboard */,
 				BC05C2851BB94FA30019AF1B /* Info.plist */,
-				53F031DF1BB9B4F700DD73E1 /* Province.swift */,
-				53F031E11BB9C13C00DD73E1 /* ProvinceController.swift */,
+				53886E7E1BBA7D88000D5B7B /* Controllers */,
+				53886E7F1BBA7D93000D5B7B /* Models */,
 			);
 			path = iOSGeoProvinceApp;
 			sourceTree = "<group>";
@@ -227,6 +249,8 @@
 				BC05C27A1BB94FA30019AF1B /* AppDelegate.swift in Sources */,
 				53F031E21BB9C13C00DD73E1 /* ProvinceController.swift in Sources */,
 				53F031E01BB9B4F700DD73E1 /* Province.swift in Sources */,
+				53886E7B1BBA7554000D5B7B /* ProvinceSection.swift in Sources */,
+				53886E7D1BBA7841000D5B7B /* ProvinceSubSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

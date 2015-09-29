@@ -10,11 +10,14 @@ import Foundation
 
 class Province {
     
-    var name: String?
-    var coordinates: [Int : [Int : [Int : Double]]]?
+    let name: String
+    var sections: [ProvinceSection] = []
     
-    required init(name: String, coordinates: [Int : [Int : [Int : Double]]]) {
-        self.name = name;
-        self.coordinates = coordinates
+    required init(name: String) {
+        self.name = name
+    }
+    
+    func addSection(set: ProvinceSection) {
+        self.sections.append(set)
     }
 }

@@ -24,16 +24,31 @@ class ViewController: UIViewController {
         let jf = JsonFetcher()
         jf.fetchy { (j: JSON) -> Void in
             for (_, p):(String, JSON) in j["features"] { // Loop through provinces
-                let provName: String = p["properties"]["provincienaam"].string!
-                let provMaps = []
+                let province: Province = Province(name: p["properties"]["provincienaam"].string!)
                 
-                for (_, maps) in p["geometry"]["coordinates"] { // Loop through maps
-                    for (_, cords) in maps { // Loop through coordinates
-//                        let long = cords[0][0].double!
-//                        let lat = cords[0][1].double!
-                        print(cords)
+                for (sectionKey, section) in p["geometry"]["coordinates"] {
+                    let provinceSection: ProvinceSection = ProvinceSection(id: Int(sectionKey)!)
+                    
+                    for (subSectionKey, subSection) in section {
+                        let provinceSubSection: ProvinceSubSection = ProvinceSubSection(id: Int(subSectionKey)!)
+                        
+                        for (_, coords) in subSection {
+                            // Add coordinates to subsection
+                            let c = CLLocationCoordinate2D(latitude: coords[1].doubleValue, longitude: coords[0].doubleValue)
+                            provinceSubSection.addCoordinates(c)
+                        }
+                        
+                        // Add subsection to section
+                        provinceSection.addSubSection(provinceSubSection)
+                        print("fire")
                     }
+                    
+                    // Add section to province
+                    province.addSection(provinceSection)
                 }
+                
+                print(province.sections[0].subSections.count)
+                //self.provinceController.addProvince(province)
             }
         }
     }

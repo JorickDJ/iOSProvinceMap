@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B59E69AD23455F35CE5F2FEA"
+               BlueprintIdentifier = "5DACE8E933AAEB6C60ACDB2D"
                BuildableName = "Pods_iOSGeoProvinceApp.framework"
                BlueprintName = "Pods-iOSGeoProvinceApp"
                ReferencedContainer = "container:Pods.xcodeproj">

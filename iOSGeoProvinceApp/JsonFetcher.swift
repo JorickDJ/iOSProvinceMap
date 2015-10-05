@@ -13,7 +13,7 @@ import SwiftyJSON
 
 class JsonFetcher {
     
-    let url: String = "http://geodata.nationaalgeoregister.nl/bestuurlijkegrenzen/wfs?service=WFS&version=2.0.0&request=GetFeature&typename=provincies&outputformat=json"
+    let url: String = "http://geodata.nationaalgeoregister.nl/bestuurlijkegrenzen/wfs?service=WFS&version=2.0.0&request=GetFeature&typename=provincies&srsName=EPSG:4326&outputformat=json"
     
     func fetchy(onComplete: (JSON) -> Void) {
         

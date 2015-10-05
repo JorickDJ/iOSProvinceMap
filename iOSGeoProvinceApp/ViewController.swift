@@ -24,8 +24,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let jf = JsonFetcher()
         jf.fetchy { (j: JSON) -> Void in
             self.onProvincesLoaded(j, onComplete: { () -> Void in
-                let province: Province = self.provinceController.getProvinceByName("Noord-Brabant")!
-                self.drawBorder(province)
+                for province in self.provinceController.getProvinces() {
+                    self.drawBorder(province)
+                }
             })
         }
     }
@@ -88,7 +89,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let polylineRenderer = MKPolylineRenderer(overlay: overlay)
         
         polylineRenderer.strokeColor = UIColor.redColor()
-        polylineRenderer.lineWidth = 10
+        polylineRenderer.lineWidth = 5
         polylineRenderer.alpha = 0.5
         
         return polylineRenderer

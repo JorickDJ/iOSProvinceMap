@@ -29,4 +29,8 @@ class ProvinceController {
         
         return nil
     }
+    
+    func getProvinces() -> [Province] {
+        return provinces
+    }
 }
